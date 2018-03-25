@@ -272,4 +272,4 @@ include fib.frt
 
 : fact rec dup 1 = if  else dup 1 - recurse * then ; 
 
-include test.frt
+include part1.frt
