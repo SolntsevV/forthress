@@ -5,7 +5,7 @@
 	then
 ;
 
-( Проверка на четность )
+( Проверка на простоту )
 : IsPrime
 	dup 0 < if ." Negative value " else
 		dup 2 < if drop 0 else
@@ -23,4 +23,13 @@
 			then 
 		then
 	then
+;
+
+( Проверка на простоту и выделение ячейки с помощью allot )
+: IsPrime-allot
+	IsPrime
+	cell% allot
+	dup
+	rot swap
+	! ( запись в память )
 ;
